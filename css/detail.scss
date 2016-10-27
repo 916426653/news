@@ -1,0 +1,52 @@
+$baseFontSize: 41.4px;
+@function pxToRem($px) {
+  @return $px / $baseFontSize / 3 * 1rem;
+}
+
+.backHeader{
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .reply-count{
+    width: pxToRem(200px);
+
+  }
+}
+.btn-back{
+  text-align: center;
+  line-height: pxToRem(100px);
+  font-size: pxToRem(60px);
+  display: inline-block;
+  height: pxToRem(100px);
+  width: pxToRem(100px);
+
+
+}
+#floor{
+  padding: pxToRem(10px);
+  margin-top: pxToRem(40px);
+  li{
+    list-style: none;
+    border: 1px solid grey;
+    margin-top: pxToRem(30px);
+    padding: pxToRem(10px);
+  }
+  img{
+    width: pxToRem(100px);
+    border-radius: 50%;
+  }
+  .reply-user{
+    display: flex;
+    align-items: center;
+
+  }
+
+}
+.my-item-container{
+  article{
+    img{
+      width: 100%;
+    }
+  }
+}

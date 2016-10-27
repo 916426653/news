@@ -1,0 +1,52 @@
+
+<style>
+    .my-item-container {
+        margin-top: 50px;
+    }
+</style>
+
+<ion-header-bar align-title="left" class=" bar-positive my-header" style="background-color: red">
+    <div class="buttons">
+        <button class="button" ng-click="doSomething()" style="background-color: red;border: 1px solid red">直播</button>
+    </div>
+    <h1 class="title" style="background-color: red">青云新闻</h1>
+    <div class="buttons">
+        <button class="button" style="background-color: red;border: 1px solid red">搜</button>
+    </div>
+    <nav-bar class="top-bar bar bar-subheader" style="z-index: 20">
+
+    </nav-bar>
+</ion-header-bar>
+
+
+<ion-content class="my-item-container">
+    <ion-refresher class="Trefresh"
+                   pulling-icon="ion-ios-world-outline"
+                   refreshing-icon="ion-ios-world-outline"
+
+                   on-refresh="loadMore()">
+    </ion-refresher>
+    <ion-list
+            show-delete="shouldShowDelete"
+            show-reorder="shouldShowReorder"
+            can-swipe="listCanSwipe">
+
+        <ion-item ng-repeat="item in items "
+                  class="item-thumbnail-left" href="#/detail/{{item.docid}}">
+            <img ng-src="{{item.imgsrc}}">
+
+            <h2>{{item.title}}</h2>
+            <div class="reply">
+                <span>{{item.recSource}}</span>
+                <p><span>跟帖{{item.replyCount}}</span>
+                    <delete-dialog show-dele class="ion-ios-close-empty"></delete-dialog>
+                </p>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll
+            on-infinite="loadMore()"
+            distance="1%">
+    </ion-infinite-scroll>
+</ion-content>

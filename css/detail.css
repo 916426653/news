@@ -1,0 +1,35 @@
+.backHeader {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .backHeader .reply-count {
+    width: 1.61031rem; }
+
+.btn-back {
+  text-align: center;
+  line-height: 0.80515rem;
+  font-size: 0.48309rem;
+  display: inline-block;
+  height: 0.80515rem;
+  width: 0.80515rem; }
+
+#floor {
+  padding: 0.08052rem;
+  margin-top: 0.32206rem; }
+  #floor li {
+    list-style: none;
+    border: 1px solid grey;
+    margin-top: 0.24155rem;
+    padding: 0.08052rem; }
+  #floor img {
+    width: 0.80515rem;
+    border-radius: 50%; }
+  #floor .reply-user {
+    display: flex;
+    align-items: center; }
+
+.my-item-container article img {
+  width: 100%; }
+
+/*# sourceMappingURL=detail.css.map */

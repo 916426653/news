@@ -1,0 +1,41 @@
+<style>
+    * {
+        font-size: 16px;
+    }
+
+    li {
+
+        margin-top: 20px;
+
+    }
+
+    .userimg {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    .reply-user {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<ion-content ng-controller="TreeController">
+
+    <ion-list>
+        <a onclick="history.back()" class=" btn-back  ion-chevron-left"></a>
+        <div ng-controller="TreeController" style="overflow: auto">
+            <ul recursion="cate">
+                <li ng-repeat="item in cate">
+                    <p>{{item.my.content}}</p>
+                    <ul recursion-child='item.children'></ul>
+                </li>
+            </ul>
+        </div>
+    </ion-list>
+    <ion-infinite-scroll
+            on-infinite="loadMore()"
+            distance="1%">
+    </ion-infinite-scroll>
+</ion-content>
+

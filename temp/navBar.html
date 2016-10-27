@@ -1,0 +1,19 @@
+
+<div class="nav-bar-container">
+    <ul class="navBar">
+        <li class="item-bar" ng-repeat="item in headerList">
+            <a href="#/headline">{{item.tname}}</a>
+        </li>
+    </ul>
+    <div class="plus">
+        <span drop-down-topic>+</span>
+    </div>
+    <ion-scroll class="topic-container">
+        <li  style="color: black" class="topic" ng-repeat="item in headerList" data-topicId="{{$index}}">
+
+            <span ng-click="move('666666')">{{item.tname}}</span>
+            <i  class="close-circled ion-close-circled"></i>
+        </li>
+    </ion-scroll>
+</div>
+

@@ -1,0 +1,38 @@
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0; }
+
+.clearfloat {
+  zoom: 1; }
+
+.my-item-container {
+  margin-top: 100px; }
+
+.reply {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between; }
+
+.dia-log {
+  visibility: visible;
+  position: fixed;
+  top: 100px;
+  z-index: 1000;
+  height: 300px;
+  background-color: antiquewhite;
+  width: 100%;
+  left: 0; }
+  .dia-log h2 {
+    text-align: center; }
+  .dia-log ul {
+    text-align: center; }
+    .dia-log ul li {
+      float: left;
+      margin-left: 20px;
+      border: 1px solid grey;
+      margin-top: 10px; }
+
+/*# sourceMappingURL=home.css.map */

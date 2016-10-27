@@ -1,0 +1,23 @@
+<div style="height: 50px;" class="backHeader">
+    <a onclick="history.back()" class=" btn-back  ion-chevron-left"></a>
+    <a class="reply-count " href="#/reply/{{news.docid}}">跟帖</a>
+</div>
+
+<ion-content class="my-item-container" style="margin-top: 45px">
+    <h3>{{news.title}}</h3>
+    <article ng-bind-html="bodys"></article>
+    <div id="floor">
+        <li ng-repeat="reply in preThree">
+            <div class="reply-user">
+                <img ng-src="{{reply.user.avatar||'http://img5.cache.netease.com/tie/images/noface80_80.png'}}" alt="">
+                <span>
+                {{reply.user.nickname ||'火星网友'}}
+                </span>
+            </div>
+            <div class="reply-comment">{{reply.content}}</div>
+        </li>
+    </div>
+    <div style="text-align: center">
+        <a class="moreBtn  button-full button button-positive " href="#/reply/{{news.docid}}">更多跟帖</a>
+    </div>
+</ion-content>
